@@ -1,0 +1,4 @@
+
+public enum exam04 {
+
+}
