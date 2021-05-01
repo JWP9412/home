@@ -1,6 +1,6 @@
 package api11_5_1_exit;
 
-public class Exit {
+public class ExitExample {
 
 	public static void main(String[] args) {
 		// 보안 관리자 설정
