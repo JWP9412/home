@@ -17,7 +17,7 @@ public class MessageFormatExample {
 		String sql = "insert into member values( {0}, {1}, {2} )";
 		Object[] arguments1 = {"'java'","'½Å¿ë±Ç'","'010-123-4567'"};
 		String result2 = MessageFormat.format(sql, arguments1);
-		System.out.println(result2);
+		System.out.println(result2  );
 		}
 
 	}
