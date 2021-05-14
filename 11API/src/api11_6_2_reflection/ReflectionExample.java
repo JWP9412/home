@@ -4,20 +4,24 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
+import api11_3_4_clone2.Car;
+
 public class ReflectionExample {
 
 	public static void main(String[] args) throws Exception {
-		Class clazz = Class.forName("sec06.exam02_reflection.Car");
+		int x = 1;
+		System.out.println(x);
+		Class<?> clazz = Class.forName("api11_3_4_clone2.Car");
 		
 		System.out.println("[클래스 이름]");
 		System.out.println(clazz.getName());
 		System.out.println();
 		
 		System.out.println("생성자 정보");
-		Constructor<T>[] constructors = clazz.getDeclaredConstructors();
+		Constructor<?>[] constructors = clazz.getDeclaredConstructors();
 		for(Constructor constructor : constructors	) {
 			System.out.print(constructor.getName() + "(");
-			Class<T>[] parameters = constructor.getParameterTypes();
+			Class[] parameters = constructor.getParameterTypes();
 			printParameters(parameters);
 			System.out.println(")");
 			System.out.println();
