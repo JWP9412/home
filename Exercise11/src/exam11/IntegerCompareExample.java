@@ -10,6 +10,7 @@ public class IntegerCompareExample {
 		
 		System.out.println(obj1==obj2);
 		System.out.println(obj3==obj4);
+		System.out.println(obj3.intValue() == obj4.intValue());
 		//Integer의 범위가 -128~127 이기 때문
 	}
 

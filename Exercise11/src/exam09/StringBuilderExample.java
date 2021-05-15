@@ -9,6 +9,9 @@ public class StringBuilderExample {
 		}
 		System.out.println(str);
 		
+		
+		
+		
 		StringBuilder sb = new StringBuilder();
 		for(int k = 1;k <=100; k++) {
 			sb.append(k);
