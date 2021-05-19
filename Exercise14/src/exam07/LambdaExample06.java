@@ -1,30 +1,29 @@
 package exam07;
 
-import java.util.function.Predicate;
+import java.util.function.ToIntFunction;
 
-public class LambdaExample07 {
+public class LambdaExample06 {
 	private static Student[] students = { new Student("Hong", 90, 96), new Student("Shin", 95, 93) };
 
 	// avg() 메소드 작성
-	public static double avg(Predicate<Student> pr) {
-		int cnt = 0, esum = 0, msum = 0;
+	public static double avg(ToIntFunction<Student> tif) {
+		int sum = 0;
 		for (Student student : students) {
-			if (pr.test(student)) {
-				cnt++;
-				esum += student.getEngScore();
-				msum += student.getMathScore();
-			}
+			sum += tif.applyAsInt(student);
 		}
-		return (double) esum/cnt;
+		return (double) sum/students.length;
 	}
 
 	public static void main(String[] args) {
 		double engAvg = avg(s -> s.getEngScore());
 		System.out.println("Eng Avg : " + engAvg);
+		double engAvg1 = avg(Student :: getEngScore);
+		System.out.println("Eng Avg1 : " + engAvg1);
 
 		double mathAvg = avg(s -> s.getMathScore());
 		System.out.println("Math Avg : " + mathAvg);
-
+		double mathAvg1 = avg(Student :: getMathScore);
+		System.out.println("Math Avg1 : " + mathAvg1);
 	}
 
 	public static class Student {

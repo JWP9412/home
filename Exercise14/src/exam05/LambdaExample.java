@@ -22,12 +22,15 @@ public class LambdaExample {
 				});
 		System.out.println("MAX : "+max);
 		
-		//최th값 얻기
+		//최소값 얻기
 				int min = maxOrMin(
-						(a,b) ->{
+						//(a,b) -> {return ((a<=b)?a:b);}
+						(a,b) ->(a<=b)?a:b
+						/*(a,b) ->{
 							if(a<=b)return a;
 							else return b;
-						});
+						}*/
+						);
 				System.out.println("MIN : "+min);
 	}
 }
