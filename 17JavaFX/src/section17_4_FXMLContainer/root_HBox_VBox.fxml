@@ -1,0 +1,26 @@
+<VBox xmlns:fx="http://javafx.com/fxml">
+	<padding>
+		<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+	</padding>
+
+	<children>
+		<ImageView fitWidth="200.0" preserveRatio="true">
+			<image>
+				<!Image url="C:\Users\지원\Desktop/penguin.jpg" />
+			</image>
+		</ImageView>
+
+		<Hbox alignment="CENTER" spacing="20.0">
+			<children>
+				<Button text="이전" />
+				<Button text="다음">
+				<HBox.hgrow><Priority fx:constant="ALWAYS"/></HBox.hgrow>
+				<maxWidth><Double fx:constant="MAX_VALUE"/></maxWidth>
+				</Button>
+			</children>
+			<VBox.margin>
+				<Insets top="10.0"/>
+			</VBox.margin>
+		</Hbox>
+	</children>
+</VBox>
