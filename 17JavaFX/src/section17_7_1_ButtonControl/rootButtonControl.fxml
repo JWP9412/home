@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.control.*?>
+
+
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1"
 	prefHeight="150.0" prefWidth="420.0"
 	fx:controller="section17_7_1_ButtonControl.ButtonController">
 	<padding>
-		<Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+		<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
 	</padding>
-	
+
 	<center>
-	<HBox
+		<HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0"
+			spacing="10" />
+		<childre>
+			<VBox prefHeight="100.0" prefWidth="100.0" spacing="20.0"
+				alignment="CENTER_LEFT">
+				<children>
+					<CheckBox fx:id="chk1" text="안경"
+						onAction="#handleChkAction" />
+					<CheckBox fx:id="chk2" text="모자"
+						onAction="#handleChkAction" />
+				</children>
+			</VBox>
+			
+			<ImageView fx:id="checkImageView" fitWidth="100.0" preserveRatio="true">
+				<image><Image url="@something something"</image>
+			</ImageView>
+		</childre>
 	</center>
 
 </BorderPane>

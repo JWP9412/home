@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.text.Font;
 
-public class RootController1761 implements Initializable{
+public class PropertyRootController implements Initializable{
 	@FXML private Slider slider;
 	@FXML private Label label;
 	

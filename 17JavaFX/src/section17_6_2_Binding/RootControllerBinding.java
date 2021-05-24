@@ -9,13 +9,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 
 public class RootControllerBinding implements Initializable {
-	@FXML private TextArea ta1;
-	@FXML private TextArea ta2;
+	@FXML private TextArea textArea1;
+	@FXML private TextArea textArea2;
 	
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		Bindings.bindBidirectional(ta1.textProperty(), ta2.textProperty());
+		Bindings.bindBidirectional(textArea1.textProperty(), textArea2.textProperty());
 		
 	}
 }

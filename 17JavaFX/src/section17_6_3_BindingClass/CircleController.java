@@ -11,11 +11,11 @@ import javafx.scene.shape.Circle;
 
 public class CircleController implements Initializable{
 	@FXML private AnchorPane rootCircle;
-	@FXML private Circle cc;
+	@FXML private Circle circle;
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		cc.centerXProperty().bind(Bindings.divide(rootCircle.widthProperty(), 2));
-		cc.centerYProperty().bind(Bindings.divide(rootCircle.widthProperty(), 2));
+		circle.centerXProperty().bind(Bindings.divide(rootCircle.widthProperty(), 2));
+		circle.centerYProperty().bind(Bindings.divide(rootCircle.widthProperty(), 2));
 		
 	}
 	

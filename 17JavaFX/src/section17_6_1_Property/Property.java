@@ -16,7 +16,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-public class AppMain1761 extends Application{
+public class Property extends Application{
 	@Override
 	public void start(Stage ps) throws Exception{
 			Parent root = (Parent)FXMLLoader.load(getClass().getResource("root1761.fxml"));
