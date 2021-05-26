@@ -10,6 +10,6 @@
 		<Circle fx:id="circle" fill="DODGERBLUE" radius="50.0"
 			stroke="BLACK" />
 	</children>
-<Circle
+
 </AnchorPane>
 

@@ -27,10 +27,7 @@ public class Property extends Application{
 			ps.setScene(scene);
 			ps.show();
 	}
-	
 	public static void main(String[] args) {
 		launch(args);
-
 	}
-
 }
