@@ -9,14 +9,14 @@
 	fx:controller="section17_6_1_Property.PropertyRootController"
 	prefHeight="250.0" prefWidth="350.0">
 	<center></center>>
-		<Label fx:id="label" text="JavaFX">
+		<Label fx:id="labelFx" text="JavaFX">
 			<font>
 				<Font size="0" />
 			</font>
 		</Label>
 	</center>
 	<bottom>
-		<Slider fx:id="slider" />
+		<Slider fx:id="sliderFx" />
 	</bottom>
 </BorderPane>
 

@@ -10,7 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class AppMain1751 extends Application{
+public class EventHandlerExample extends Application{
 	@Override
 	public void start(Stage ps) throws Exception{
 		HBox root = new HBox();

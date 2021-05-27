@@ -47,11 +47,5 @@ public class RootController implements Initializable{
 		System.out.println("버튼3 클릭");
 		
 	}
-	
-	
-	public static void main(String[] args) {
-	
-	}
-	
 
 }

@@ -14,7 +14,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-public class ConController implements Initializable {
+public class InputController implements Initializable {
 	@FXML private TextField txtTitle;
 	@FXML private PasswordField txtPassword;
 	@FXML private ComboBox<String> comboPublic;

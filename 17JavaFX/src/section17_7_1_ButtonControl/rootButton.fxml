@@ -28,14 +28,14 @@
 				<VBox alignment="CENTER_LEFT" prefHeight="100.0"
 					prefWidth="100.0" spacing="20.0">
 					<children>
-						<CheckBox id="chk1" onAction="#handleChkAction"
+						<CheckBox fx:id="chk1" onAction="#handleChkAction"
 							text="선글라스" />
-						<CheckBox id="chk2" onAction="#handleChkAction"
+						<CheckBox fx:id="chk2" onAction="#handleChkAction"
 							text="중절모" />
 					</children>
 				</VBox>
 
-				<ImageView id="checkImageView" fitWidth="147.0"
+				<ImageView fx:id="checkImageView" fitWidth="147.0"
 					preserveRatio="true">
 					<image>
 						<Image url="@duckcat.jpg" />

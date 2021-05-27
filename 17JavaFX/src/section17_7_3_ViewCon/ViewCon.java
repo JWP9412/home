@@ -58,9 +58,9 @@ public class ViewCon implements Initializable {
 				tcSmartPhone.setCellFactory(new PropertyValueFactory("smartPhone"));
 				tcSmartPhone.setStyle("-fx-alignment: CENTER;");
 
-				TableColumn tcSmartImage = tableView.getColumns().get(1);
-				tcSmartPhone.setCellFactory(new PropertyValueFactory("image"));
-				tcSmartPhone.setStyle("-fx-alignment: CENTER;");
+				TableColumn tcImage = tableView.getColumns().get(1);
+				tcImage.setCellFactory(new PropertyValueFactory("image"));
+				tcImage.setStyle("-fx-alignment: CENTER;");
 
 				tableView.setItems(phoneList);
 
