@@ -2,6 +2,7 @@ package sec02;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Iterator;
 
 public class PathEx {
 
@@ -14,6 +15,13 @@ public class PathEx {
 		System.out.println();
 		for(int x=0; x<path.getNameCount();x++) {
 			System.out.println(path.getName(x));
+		}
+		
+		System.out.println();
+		Iterator<Path> iterator = path.iterator();
+		while(iterator.hasNext()) {
+			Path temp = iterator.next();
+			System.out.println(temp.getFileName());
 		}
 
 	}
