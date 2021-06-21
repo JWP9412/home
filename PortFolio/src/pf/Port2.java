@@ -23,8 +23,8 @@ public class Port2 {
 		BufferedImage ma2 = null;
 		BufferedImage ma3 = null;
 
-		String url1 = "C:/te/컬러리스트/rr.jpg";
-		String url2 = "C:/te/컬러리스트/gg.jpg";
+		String url1 = "C:/te/컬러리스트/bb.png";
+		String url2 = "C:/te/컬러리스트/oo.png";
 		File targetFileName = new File("C:/te/newcolor.jpg");
 		FileOutputStream fos = new FileOutputStream(targetFileName);
 		FileInputStream fis = new FileInputStream(targetFileName);
@@ -33,10 +33,10 @@ public class Port2 {
 		try {
 			image1 = ImageIO.read(new File(url1));
 			image2 = ImageIO.read(new File(url2));
-			ma0 = ImageIO.read(new File("C:/te/컬러리스트/출력/ma0.jpg"));
-			ma1 = ImageIO.read(new File("C:/te/컬러리스트/출력/ma1.jpg"));
-			ma2 = ImageIO.read(new File("C:/te/컬러리스트/출력/ma2.jpg"));
-			ma3 = ImageIO.read(new File("C:/te/컬러리스트/출력/ma3.jpg"));
+			ma0 = ImageIO.read(new File("C:/te/컬러리스트/출력/oc0.png"));
+			ma1 = ImageIO.read(new File("C:/te/컬러리스트/출력/oc1.png"));
+			ma2 = ImageIO.read(new File("C:/te/컬러리스트/출력/oc2.png"));
+			ma3 = ImageIO.read(new File("C:/te/컬러리스트/출력/oc3.png"));
 
 			int x1 = image1.getWidth(null);
 			int y1 = image1.getHeight(null);
@@ -213,10 +213,10 @@ public class Port2 {
 				}
 			}
 			try {
-				ImageIO.write(ma0, "jpg", new File("C:/te/컬러리스트/출력/00.jpg"));
-				ImageIO.write(ma1, "jpg", new File("C:/te/컬러리스트/출력/01.jpg"));
-				ImageIO.write(ma2, "jpg", new File("C:/te/컬러리스트/출력/02.jpg"));
-				ImageIO.write(ma3, "jpg", new File("C:/te/컬러리스트/출력/03.jpg"));
+				ImageIO.write(ma0, "jpg", new File("C:/te/컬러리스트/출력/000.jpg"));
+				ImageIO.write(ma1, "jpg", new File("C:/te/컬러리스트/출력/001.jpg"));
+				ImageIO.write(ma2, "jpg", new File("C:/te/컬러리스트/출력/002.jpg"));
+				ImageIO.write(ma3, "jpg", new File("C:/te/컬러리스트/출력/003.jpg"));
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

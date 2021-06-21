@@ -148,7 +148,13 @@ public class RgbToLab {
 		result[0] = (int) Math.round(r * 255);
 		result[1] = (int) Math.round(g * 255);
 		result[2] = (int) Math.round(b * 255);
-
+		//---------- 내가 추가한거
+		for(int i=0;i<result.length;i++) {
+			if(result[i]>255) {
+				result[i]=255;
+			}
+		}
+		/// 까지
 		return result;
 	}
 
