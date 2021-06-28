@@ -20,16 +20,13 @@ public class Convert {
 
 		RgbToLab rtl = new RgbToLab();
 
-		String url1 = "C:/te/컬러리스트/or1.png";
-		String url2 = "C:/te/컬러리스트/or2.png";
-
 		try {
-			inputColor1 = ImageIO.read(new File(url1));
-			inputColor2 = ImageIO.read(new File(url2));
-			outputColor0 = ImageIO.read(new File("C:/te/컬러리스트/출력/oc0.png"));
-			outputColor1 = ImageIO.read(new File("C:/te/컬러리스트/출력/oc1.png"));
-			outputColor2 = ImageIO.read(new File("C:/te/컬러리스트/출력/oc2.png"));
-			outputColor3 = ImageIO.read(new File("C:/te/컬러리스트/출력/oc3.png"));
+			inputColor1 = ImageIO.read(new File("C:/te/컬러리스트/in1.png"));
+			inputColor2 = ImageIO.read(new File("C:/te/컬러리스트/in2.png"));
+			outputColor0 = ImageIO.read(new File("C:/te/컬러리스트/출력/base.png"));
+			outputColor1 = ImageIO.read(new File("C:/te/컬러리스트/출력/base.png"));
+			outputColor2 = ImageIO.read(new File("C:/te/컬러리스트/출력/base.png"));
+			outputColor3 = ImageIO.read(new File("C:/te/컬러리스트/출력/base.png"));
 
 			int x1 = inputColor1.getWidth(null);
 			int y1 = inputColor1.getHeight(null);
@@ -57,7 +54,7 @@ public class Convert {
 			System.out.println("RGB InputColor1 | R : " + red1 + "| G : " + green1 + "| B : " + blue1);
 			System.out.println("RGB InputColor2 | R : " + red2 + "| G : " + green2 + "| B : " + blue2);
 			System.out.println();
-			
+
 			System.out.println("InputColor1 | L* : " + c1Value[0] + "| a* : " + c1Value[1] + "| b* : " + c1Value[2]);
 			System.out.println("InputColor2 | L* : " + c2Value[0] + "| a* : " + c2Value[1] + "| b* : " + c2Value[2]);
 			System.out.println();
@@ -79,43 +76,45 @@ public class Convert {
 					minColor[i] = c1Value[i];
 					maxColor[i] = c2Value[i];
 				}
-				newColor1[i] = c1Value[i] + gab[i] / 3;
-//				newColor2[i] = c1Value[i] + (gab[i] / 3) * 2;
+				newColor1[i] = c1Value[i] + (gab[i] / 3);
 				newColor2[i] = c2Value[i] - (gab[i] / 3);
-				
-				newColorR[i] = c2Value[i] + gab[i]/3;
-				newColorL[i] = c1Value[i] - gab[i]/3;
-				
-				if(newColorR[0] >100) {
+
+				newColorR[i] = c2Value[i] + (gab[i] / 3);
+				newColorL[i] = c1Value[i] - (gab[i] / 3);
+
+				if (newColorR[0] > 100) {
 					newColorR[0] = 100;
 				}
-				if(newColorL[0]< -100) {
+				if (newColorL[0] < -100) {
 					newColorL[0] = -100;
 				}
-				
+
 				System.out.println("gab [" + i + "] : " + gab[i]);
 				System.out.println("[" + i + "] min : " + minColor[i] + " || max : " + maxColor[i]);
-				System.out.println("[" + i + "] n1 : " + newColor1[i] + " || n2 : " + newColor2[i] + " || L : " + newColorL[i] + " || R : " + newColorR[i]);
+				System.out.println("[" + i + "] n1 : " + newColor1[i] + " || n2 : " + newColor2[i] + " || L : "
+						+ newColorL[i] + " || R : " + newColorR[i]);
 				System.out.println();
 			}
 			System.out.println();
-			System.out.println(newColor1[1]);;
+
 			int newRGB1[] = rtl.LABtoRGB(newColor1);
 			int newRGB2[] = rtl.LABtoRGB(newColor2);
 			int newRGBL[] = rtl.LABtoRGB(newColorL);
 			int newRGBR[] = rtl.LABtoRGB(newColorR);
-			
-			System.out.println("1 : R : " + newRGB1[0] +" G : "+newRGB1[1]+" B : "+newRGB1[2]);
-			System.out.println("2 : R : " + newRGB2[0] +" G : "+newRGB2[1]+" B : "+newRGB2[2]);
-			System.out.println("L : R : " + newRGBL[0] +" G : "+newRGBL[1]+" B : "+newRGBL[2]);
-			System.out.println("R : R : " + newRGBR[0] +" G : "+newRGBR[1]+" B : "+newRGBR[2]);
-			int newRGBValue1 = new Color(newRGB1[0], newRGB1[1], newRGB1[2], 255).getRGB();
-			int newRGBValue2 = new Color(newRGB2[0], newRGB2[1], newRGB2[2], 255).getRGB();
-			int newRGBValueL = new Color(newRGBL[0], newRGBL[1], newRGBL[2], 255).getRGB();
-			int newRGBValueR = new Color(newRGBR[0], newRGBR[1], newRGBR[2], 255).getRGB();
+
+			System.out.println("L : R : " + newRGBL[0] + " G : " + newRGBL[1] + " B : " + newRGBL[2]);
+			System.out.println("I1: R : " + red1 + " G : " + green1 + " B : " + blue1);
+			System.out.println("1 : R : " + newRGB1[0] + " G : " + newRGB1[1] + " B : " + newRGB1[2]);
+			System.out.println("2 : R : " + newRGB2[0] + " G : " + newRGB2[1] + " B : " + newRGB2[2]);
+			System.out.println("I2: R : " + red2 + " G : " + green2 + " B : " + blue2);
+			System.out.println("R : R : " + newRGBR[0] + " G : " + newRGBR[1] + " B : " + newRGBR[2]);
+			int newRGBValue1 = new Color(newRGB1[0], newRGB1[1], newRGB1[2], 1).getRGB();
+			int newRGBValue2 = new Color(newRGB2[0], newRGB2[1], newRGB2[2], 1).getRGB();
+			int newRGBValueL = new Color(newRGBL[0], newRGBL[1], newRGBL[2], 1).getRGB();
+			int newRGBValueR = new Color(newRGBR[0], newRGBR[1], newRGBR[2], 1).getRGB();
 			int width = inputColor1.getWidth();
 			int height = inputColor1.getHeight();
-			
+
 			for (int w = 0; w < width; w++) {
 				for (int h = 0; h < height; h++) {
 					outputColor0.setRGB(w, h, newRGBValue1);
@@ -136,6 +135,5 @@ public class Convert {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 }
