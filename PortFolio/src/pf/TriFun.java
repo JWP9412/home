@@ -1,23 +1,23 @@
 package pf;
 
-public class Triangle {
+public class TriFun {
 
 	public static void main(String[] args) {
-		int xL = -14; // 밑변
-		int yL = 62; // 높이
+		int xColorA = -14; // 밑변
+		int yColorA = 62; // 높이
 
-		int xR = 25;
-		int yR = -30;
+		int xColorB = 25;
+		int yColorB = -30;
 
-		int X = Math.abs(xL) + Math.abs(xR);
-		int Y = Math.abs(yL) + Math.abs(yR);
-		double Z = Math.sqrt(Math.pow(X, 2) + Math.pow(Y, 2));
-		System.out.println("xL+xR = " + X + " || yL+yR = " + Y + " || 대각선 = " + Z);
+		int lineA = Math.abs(xColorA) + Math.abs(xColorB);
+		int lineB = Math.abs(yColorA) + Math.abs(yColorB);
+		double lineC = Math.sqrt(Math.pow(lineA, 2) + Math.pow(lineB, 2));
+		System.out.println("xColorA+xColorB = " + lineA + " || yColorA+yColorB = " + lineB + " || 대각선 = " + lineC);
 
 		int angle = 0;
 
-		if (xL * xR * yL * yR > 0) {
-			if (xL * xR > 0) {
+		if (xColorA * xColorB * yColorA * yColorB > 0) {
+			if (xColorA * xColorB > 0) {
 				System.out.println("두 점은 같은 사분면에 위치한다");
 			} else {
 				angle += 90;
@@ -27,20 +27,20 @@ public class Triangle {
 			System.out.println("두 점은 인접한 사분면에 위치한다");
 		}
 
-		double zL = Math.sqrt(Math.pow(xL, 2) + Math.pow(yL, 2)); // pow 제곱 z==대각선
-		double zR = Math.sqrt(Math.pow(xR, 2) + Math.pow(yR, 2));
+		double zL = Math.sqrt(Math.pow(xColorA, 2) + Math.pow(yColorA, 2)); // pow 제곱 z==대각선
+		double zR = Math.sqrt(Math.pow(xColorB, 2) + Math.pow(yColorB, 2));
 		// System.out.println("L점은 " + psL + "사분면에 위치함");
-		System.out.println("왼쪽 대각선 = " + zL + "|| 오른쪽 대각선 = " + zR + " || 두점 사이의 거리 = " + Z);
+		System.out.println("왼쪽 대각선 = " + zL + "|| 오른쪽 대각선 = " + zR + " || 두점 사이의 거리 = " + lineC);
 		double gab = Math.abs(zL-zR);
 		System.out.println("두 변의 길이 차 = "+ gab + " || 길이 차 / 색상 거리 칸수 = " + gab/3);
 
-		double tan = Math.toDegrees(Math.atan((double) yL / Math.abs(xL)));
+		double tan = Math.toDegrees(Math.atan((double) yColorA / Math.abs(xColorA)));
 		double tanZ = Math.toDegrees(Math.atan((double) zL / Math.abs(zR)));
 		double cosZ = Math.toDegrees(Math.atan((double) zL / Math.abs(zR)));
 		System.out.println("tanZ : " + Math.round(tanZ));
 		System.out.println(Math.round(tan));
 		System.out.println(Math.round(90 - tan));
-		double cosA = (Math.pow(Z, 2) - Math.pow(zL, 2) - Math.pow(zR, 2)) / (-2 * zL * zR);
+		double cosA = (Math.pow(lineC, 2) - Math.pow(zL, 2) - Math.pow(zR, 2)) / (-2 * zL * zR);
 		double angleA = Math.round(Math.toDegrees(Math.acos(cosA)));
 		System.out.println("두 변의 각도 :" + angleA + "|| 각도 / 색상 거리 칸수 = " + angleA/3);
 		
