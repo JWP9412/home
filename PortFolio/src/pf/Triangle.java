@@ -27,7 +27,7 @@ public class Triangle {
 			System.out.println("두 점은 인접한 사분면에 위치한다");
 		}
 
-		double zL = Math.sqrt(Math.pow(xL, 2) + Math.pow(yL, 2)); // pow 제곱 z==대각선
+		double zL = Math.sqrt(Math.pow(xL, 2) + Math.pow(yL, 2)); // pow 제곱 z==대각선 z
 		double zR = Math.sqrt(Math.pow(xR, 2) + Math.pow(yR, 2));
 		// System.out.println("L점은 " + psL + "사분면에 위치함");
 		System.out.println("왼쪽 대각선 = " + zL + "|| 오른쪽 대각선 = " + zR + " || 두점 사이의 거리 = " + Z);
