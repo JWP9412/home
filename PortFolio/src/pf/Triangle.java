@@ -42,25 +42,35 @@ public class Triangle {
 		System.out.println(Math.round(90 - tan));
 		double cosA = (Math.pow(Z, 2) - Math.pow(zL, 2) - Math.pow(zR, 2)) / (-2 * zL * zR);
 		double angleA = Math.round(Math.toDegrees(Math.acos(cosA)));
-		System.out.println("두 변의 각도 :" + angleA + "|| 각도/색상 거리 칸수 = " + angleA/3);
+		System.out.println("두 변의 각도 :" + angleA + "|| 각도 / 색상 거리 칸수 = " + angleA/3);
 		
 		double sTa1 = zL;
 		double sTa2 = zL - gab/3;
+		double sTa3 = zR + gab/3;
 		System.out.println("중간첫째 : "+sTa2);
+		System.out.println("중간둘째 : "+sTa3);
 		System.out.println(Math.acos(52));
 		double a1 = 55.3;
 		double a1pow =  Math.pow(a1, 2);
 		
-		for(double x=0; x<128; x += 0.01) {
-			//System.out.println(x);
-			for(double y=0; y<128; y += 0.01) {
-				
-				if(a1pow == (x*x+y*y)) {
-					System.out.println(x + "z "+y);
-					break;
-				}
-			}
-		}System.out.println("끝");
+		
+		
+		double cosQ = Math.round(Math.toDegrees(Math.acos((double) 62 / Math.abs(63.56)))) ;
+		double angleXto1 = angleA/3 - cosQ;
+		
+		System.out.println("cosQ : " + cosQ);
+		System.out.println("수직선(+)에서 선분1까지의 각도 : "+angleXto1);
+		
+		double WcosX = Math.cos(Math.toRadians(52));
+		double WcosY = Math.cos(Math.toRadians(90-52));
+		System.out.println("Wx : " +WcosX*sTa2 + " || Wy : " + WcosY*sTa2);
+		System.out.println(34.1*Math.cos(Math.toRadians(51))-43.65*Math.sin(Math.toRadians(51))) ;
+		System.out.println(34.1*Math.sin(Math.toRadians(51))+43.65*Math.cos(Math.toRadians(51))) ;
+		double EcosX = Math.cos(Math.toRadians(1));
+		double EcosY = Math.sin(Math.toRadians(1));
+		System.out.println("Ex : " +EcosX*sTa3 + " || Ey : " + EcosY*sTa3);
+		
+		System.out.println("끝");
 	}
 
 }
