@@ -11,6 +11,7 @@ public class Triangle {
 
 		int X = Math.abs(xL) + Math.abs(xR);
 		int Y = Math.abs(yL) + Math.abs(yR);
+		
 		double Z = Math.sqrt(Math.pow(X, 2) + Math.pow(Y, 2));
 		System.out.println("xL+xR = " + X + " || yL+yR = " + Y + " || ´ë°¢¼± = " + Z);
 
