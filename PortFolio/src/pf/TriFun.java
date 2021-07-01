@@ -45,7 +45,7 @@ public class TriFun {
 		System.out.println("angleAO+Y = "+Math.round(90 - tan));
 		double cosAOB = (Math.pow(lineAB, 2) - Math.pow(lineOA, 2) - Math.pow(lineOB, 2)) / (-2 * lineOA * lineOB);
 		double angleAOB = Math.round(Math.toDegrees(Math.acos(cosAOB)));
-		System.out.println("각도 AOB :" + angleAOB + "|| 각도 / 색상 거리 칸수 = " + angleAOB/3);
+		System.out.println("각도 AOB :" + angleAOB + "|| 각도AOB / 색상 거리 칸수 = " + angleAOB/3);
 		
 		double sTa1 = lineOA;
 		double lineOnewP = lineOA + gab/3;
@@ -60,23 +60,33 @@ public class TriFun {
 		
 		
 		
-		double cosQ = Math.round(Math.toDegrees(Math.acos((double) 62 / Math.abs(63.56)))) ;
-		double angleXto1 = angleAOB/3 - cosQ;
+		double angleAOY = Math.round(Math.toDegrees(Math.acos((double) 62 / Math.abs(63.56)))) ; //각도 AOB
+		double angleYONewA = angleAOB/3 - angleAOY;
+		double angleNewAOX = 90-angleYONewA;
 		
-		System.out.println("cosQ : " + cosQ);
-		System.out.println("수직선(+)에서 선분1까지의 각도 : "+angleXto1);
+		System.out.println("angleAOY : " + angleAOY);
+		System.out.println("수직선(Y+)에서 선분 newA 까지의 각도 : "+angleYONewA);
+		System.out.println("newA에서 선분 수평선(X+) 까지의 각도 : "+angleNewAOX);
 		
-		double WcosX = Math.cos(Math.toRadians(52));
-		double WcosY = Math.cos(Math.toRadians(90-52));
-		System.out.println("Wx : " +WcosX*sTa2 + " || Wy : " + WcosY*sTa2);
+		double WcosX = Math.cos(Math.toRadians(angleNewAOX)); //cos38
+		double WcosY = Math.cos(Math.toRadians(angleYONewA)); //cos52
+		System.out.println("xNewA : " +WcosX*lineOnewA + " || yNewA : " + WcosY*lineOnewA);
 		System.out.println(34.1*Math.cos(Math.toRadians(51))-43.65*Math.sin(Math.toRadians(51))) ;
 		System.out.println(34.1*Math.sin(Math.toRadians(51))+43.65*Math.cos(Math.toRadians(51))) ;
 		double EcosX = Math.cos(Math.toRadians(1));
 		double EcosY = Math.sin(Math.toRadians(1));
-		System.out.println("Ex : " +EcosX*sTa3 + " || Ey : " + EcosY*sTa3);
+		System.out.println("xNewB : " +EcosX*lineOnewB + " || yNewB : " + EcosY*lineOnewB);
+		
+		double McosX = Math.cos(Math.toRadians(-11));
+		double McosY = Math.sin(Math.toRadians(-11));
+		System.out.println("xM : " +McosX*lineOnewM + " || yM : " + McosY*lineOnewM);
+		
+		double PcosX = Math.cos(Math.toRadians(13));
+		double PcosY = Math.sin(Math.toRadians(13));
+		System.out.println("xP : " +PcosX*lineOnewP + " || yP : " + PcosY*lineOnewP);
 		
 		System.out.println("끝");
-		System.out.println(Math.atan2(-14, 25));;
+		System.out.println(Math.atan2(-14, 25));
 	}
 
 }
