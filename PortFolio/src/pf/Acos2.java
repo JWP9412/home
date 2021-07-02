@@ -9,14 +9,14 @@ public class Acos2 {
 		double bx = 25;
 		double by = -30;
 		
-		double ox = 0;
-		double oy = 0;
+//		double ox = 0;
+//		double oy = 0;
 
-		double xA = ax - ox;
-		double yA = ay - oy;
+		double xA = ax - 0;
+		double yA = ay - 0;
 		
-		double xB = bx - ox;
-		double yB = by - oy;
+		double xB = bx - 0;
+		double yB = by - 0;
 		
 		double radianA = Math.atan2(yA, xA);
 		double radianB = Math.atan2(yB, xB);
@@ -24,8 +24,8 @@ public class Acos2 {
 		double degreeA = Math.toDegrees(radianA);
 		double degreeB = Math.toDegrees(radianB);
 
-		System.out.println(degreeA);
-		System.out.println(degreeB);
+		System.out.println("각도 AOX : "+ degreeA);
+		System.out.println("각도 XOB : "+degreeB);
 		double angleAOB = Math.abs(degreeA) + Math.abs(degreeB);
 		double angleAOBDiv = angleAOB/3;
 		System.out.println("angleAOB : "+angleAOB + "  ||  angleAOB / 칸수 : "+angleAOBDiv);
