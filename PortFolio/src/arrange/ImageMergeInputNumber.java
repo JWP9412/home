@@ -1,4 +1,4 @@
-package pf;
+package arrange;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -7,16 +7,16 @@ import java.io.File;
 
 import javax.imageio.ImageIO;
 
-public class ImageMergeCAD {
+public class ImageMergeInputNumber {
 
 	public static void RunOriginMerge(){
 		try {
-			BufferedImage img1 = ImageIO.read(new File("C:/te/컬러리스트/출력/GL.png"));
+			BufferedImage img1 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/GL.png"));
 			BufferedImage img2 = ImageIO.read(new File("C:/te/컬러리스트/in11.png"));
-			BufferedImage img3 = ImageIO.read(new File("C:/te/컬러리스트/출력/GB1.png"));
-			BufferedImage img4 = ImageIO.read(new File("C:/te/컬러리스트/출력/GB2.png"));
+			BufferedImage img3 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/GB1.png"));
+			BufferedImage img4 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/GB2.png"));
 			BufferedImage img5 = ImageIO.read(new File("C:/te/컬러리스트/in22.png"));
-			BufferedImage img6 = ImageIO.read(new File("C:/te/컬러리스트/출력/GR.png"));
+			BufferedImage img6 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/GR.png"));
 			
 			
 			int width = 
@@ -38,7 +38,7 @@ public class ImageMergeCAD {
 			gp.drawImage(img5, 400, 0,null);
 			gp.drawImage(img6, 500, 0,null);
 			
-			ImageIO.write(mergedImg,"png",new File("C:/te/컬러리스트/출력/GMergedOrigin3.png"));
+			ImageIO.write(mergedImg,"png",new File("C:/te/컬러리스트/TeNum/OriginMergedOrigin"+".png"));
 			System.out.println("원본 사진과 이어 붙이기 완료");
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -51,12 +51,12 @@ public class ImageMergeCAD {
 	
 	public static void RunAvgMerge(){
 		try {
-			BufferedImage img1 = ImageIO.read(new File("C:/te/컬러리스트/출력/L.png"));
-			BufferedImage img2 = ImageIO.read(new File("C:/te/컬러리스트/출력/Avg1.png"));
-			BufferedImage img3 = ImageIO.read(new File("C:/te/컬러리스트/출력/B1.png"));
-			BufferedImage img4 = ImageIO.read(new File("C:/te/컬러리스트/출력/B2.png"));
-			BufferedImage img5 = ImageIO.read(new File("C:/te/컬러리스트/출력/Avg2.png"));
-			BufferedImage img6 = ImageIO.read(new File("C:/te/컬러리스트/출력/R.png"));
+			BufferedImage img1 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/GL.png"));
+			BufferedImage img2 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/GAvg1.png"));
+			BufferedImage img3 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/GB1.png"));
+			BufferedImage img4 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/GB2.png"));
+			BufferedImage img5 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/GAvg2.png"));
+			BufferedImage img6 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/GR.png"));
 			
 			
 			int width = 
@@ -78,7 +78,7 @@ public class ImageMergeCAD {
 			gp.drawImage(img5, 400, 0,null);
 			gp.drawImage(img6, 500, 0,null);
 			
-			ImageIO.write(mergedImg,"png",new File("C:/te/컬러리스트/출력/MergedAvg2.png"));
+			ImageIO.write(mergedImg,"png",new File("C:/te/컬러리스트/TeNum/AvgMergedAvg"+".png"));
 			System.out.println("원본사진의 평균값 이미지로 이어 붙이기 완료");
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -90,14 +90,14 @@ public class ImageMergeCAD {
 	}
 	public static void main(String[] args) {
 		try {
-			BufferedImage img1 = ImageIO.read(new File("C:/te/컬러리스트/출력/L.png"));
+			BufferedImage img1 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/L.png"));
 //			BufferedImage img2 = ImageIO.read(new File("C:/te/컬러리스트/in1.png"));
-			BufferedImage img2 = ImageIO.read(new File("C:/te/컬러리스트/출력/Avg1.png"));
-			BufferedImage img3 = ImageIO.read(new File("C:/te/컬러리스트/출력/B1.png"));
-			BufferedImage img4 = ImageIO.read(new File("C:/te/컬러리스트/출력/B2.png"));
+			BufferedImage img2 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/Avg1.png"));
+			BufferedImage img3 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/B1.png"));
+			BufferedImage img4 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/B2.png"));
 //			BufferedImage img5 = ImageIO.read(new File("C:/te/컬러리스트/in2.png"));
-			BufferedImage img5 = ImageIO.read(new File("C:/te/컬러리스트/출력/Avg2.png"));
-			BufferedImage img6 = ImageIO.read(new File("C:/te/컬러리스트/출력/R.png"));
+			BufferedImage img5 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/Avg2.png"));
+			BufferedImage img6 = ImageIO.read(new File("C:/te/컬러리스트/TeNum/R.png"));
 			
 			
 			int width = 
@@ -119,12 +119,12 @@ public class ImageMergeCAD {
 			gp.drawImage(img5, 400, 0,null);
 			gp.drawImage(img6, 500, 0,null);
 			
-			ImageIO.write(mergedImg,"png",new File("C:/te/컬러리스트/출력/Merged1.png"));
+			ImageIO.write(mergedImg,"png",new File("C:/te/컬러리스트/TeNum/Merged1.png"));
 			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-System.out.println("출력 완료");
+System.out.println("TeNum 폴더로 출력 완료");
 	}
 
 }

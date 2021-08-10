@@ -5,11 +5,11 @@ public class TriFun {
 	public static void main(String[] args) {
 		int gabBox = 3;
 
-		int xColorA = -14; // 밑변
-		int yColorA = 62; // 높이
-
-		int xColorB = 25;
-		int yColorB = -30;
+		int xColorA = -14; // 밑변 -14
+		int yColorA = 62; // 높이 62
+	
+		int xColorB = 25; // 25
+		int yColorB = -30; // -30
 
 		double xA = xColorA - 0;
 		double yA = yColorA - 0;
@@ -34,9 +34,11 @@ public class TriFun {
 		System.out.println("------------------------------각도------------------------------");
 		System.out.println("각도 AOX : " + angleAOX);
 		System.out.println("각도 XOB : " + angleXOB);
+		System.out.println();
 		System.out.println("각도 AOYdouble : " + angleAOYdouble);
 		System.out.println("각도 angleXOnewA : "+angleXOnewA);
 		System.out.println("각도 angleXOnewB : "+angleXOnewB);
+		
 		System.out.println("각도 angleXOM : "+angleXOM);
 		System.out.println("각도 angleYOM : "+angleYOM);
 		System.out.println("각도 AOBdouble : " + angleAOBdouble + "  ||  angleAOB / 칸수 : " + angleAOBDiv);
@@ -89,7 +91,8 @@ public class TriFun {
 		
 		System.out.println("각도 AOB :" + angleAOB + "|| 각도AOB / 색상 거리 칸수 = " + angleAOB / gabBox);
 		System.out.println();
-
+		
+		//각 선분의 길이를 구함
 		double lineOnewP = lineOA + gab / gabBox;
 		double lineOnewA = lineOA - gab / gabBox;
 		double lineOnewB = lineOB + gab / gabBox;
@@ -121,8 +124,8 @@ public class TriFun {
 		System.out.println("xNewB : " + EcosX * lineOnewB + " || yNewB : " + EcosY * lineOnewB);
 
 		
-		double McosX = Math.cos(Math.toRadians(angleYOM)); //11
-		double McosY = Math.sin(Math.toRadians(angleYOM)); //11
+		double McosX = Math.cos(Math.toRadians(90-angleYOM)); //11
+		double McosY = Math.sin(Math.toRadians(90-angleYOM)); //11
 		
 		System.out.println("xM : " + McosX * lineOnewM + " || yM : " + McosY * lineOnewM);
 
@@ -139,7 +142,7 @@ public class TriFun {
 		System.out.println("xNewA	: " + WcosX * lineOnewA + "   || yNewA   : " + WcosY * lineOnewA);
 		System.out.println("xNewB 	: " + EcosX * lineOnewB + "   || yNewB   : " + EcosY * lineOnewB);
 		System.out.println("xColorB : " + xColorB + "                  || yColorB : " + yColorB);
-		System.out.println("xM      : " + -(McosX * lineOnewM) + " || yM      : " + McosY * lineOnewM);
+		System.out.println("xM      : " +  (McosX * lineOnewM) + " || yM      : " + -(McosY * lineOnewM));
 		System.out.println("-------------------------------------------------------------------------------------");
 		System.out.println(angleNewAOX - angleGabdiv);
 	}

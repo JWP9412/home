@@ -1,4 +1,4 @@
-package pf;
+package arrange;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
@@ -7,7 +7,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class ConvertCAD {
+public class ConvertInputNumber {
 
 	public static void main(String[] args) throws IOException {
 		BufferedImage inputColor1 = null;
@@ -25,12 +25,12 @@ public class ConvertCAD {
 		try {
 			inputColor1 = ImageIO.read(new File("C:/te/컬러리스트/in11.png"));
 			inputColor2 = ImageIO.read(new File("C:/te/컬러리스트/in22.png"));
-			outputColor0 = ImageIO.read(new File("C:/te/컬러리스트/출력/base.png"));
-			outputColor1 = ImageIO.read(new File("C:/te/컬러리스트/출력/base.png"));
-			outputColor2 = ImageIO.read(new File("C:/te/컬러리스트/출력/base.png"));
-			outputColor3 = ImageIO.read(new File("C:/te/컬러리스트/출력/base.png"));
-			outputAvgColor1 = ImageIO.read(new File("C:/te/컬러리스트/출력/base.png"));
-			outputAvgColor2 = ImageIO.read(new File("C:/te/컬러리스트/출력/base.png"));
+			outputColor0 = ImageIO.read(new File("C:/te/컬러리스트/base/base.png"));
+			outputColor1 = ImageIO.read(new File("C:/te/컬러리스트/base/base.png"));
+			outputColor2 = ImageIO.read(new File("C:/te/컬러리스트/base/base.png"));
+			outputColor3 = ImageIO.read(new File("C:/te/컬러리스트/base/base.png"));
+			outputAvgColor1 = ImageIO.read(new File("C:/te/컬러리스트/base/base.png"));
+			outputAvgColor2 = ImageIO.read(new File("C:/te/컬러리스트/base/base.png"));
 
 			int x1 = inputColor1.getWidth(null);
 			int y1 = inputColor1.getHeight(null);
@@ -130,7 +130,7 @@ public class ConvertCAD {
 				System.out.println();
 			}
 			// LAB to RGB
-			double g1[] = {90.6,34.36,43.52};
+			double g1[] = {90.6,34.08,43.66};
 			double g2[] = {85.07,47.21,0.86};
 			double gL[] = {101.67,-64.3,31.78};
 			double gR[] = {74.0,-5.98,-30.29};
@@ -171,22 +171,22 @@ public class ConvertCAD {
 
 				}
 			}
-			ImageIO.write(outputColor0, "png", new File("C:/te/컬러리스트/출력/GB1.png"));
-			ImageIO.write(outputColor1, "png", new File("C:/te/컬러리스트/출력/GB2.png"));
-			ImageIO.write(outputColor2, "png", new File("C:/te/컬러리스트/출력/GL.png"));
-			ImageIO.write(outputColor3, "png", new File("C:/te/컬러리스트/출력/GR.png"));
-			ImageIO.write(outputAvgColor1, "png", new File("C:/te/컬러리스트/출력/GAvg1.png"));
-			ImageIO.write(outputAvgColor2, "png", new File("C:/te/컬러리스트/출력/GAvg2.png"));
-			System.out.println("출력 완료");
+			ImageIO.write(outputColor0, "png", new File("C:/te/컬러리스트/TeNum/GB1.png"));
+			ImageIO.write(outputColor1, "png", new File("C:/te/컬러리스트/TeNum/GB2.png"));
+			ImageIO.write(outputColor2, "png", new File("C:/te/컬러리스트/TeNum/GL.png"));
+			ImageIO.write(outputColor3, "png", new File("C:/te/컬러리스트/TeNum/GR.png"));
+			ImageIO.write(outputAvgColor1, "png", new File("C:/te/컬러리스트/TeNum/GAvg1.png"));
+			ImageIO.write(outputAvgColor2, "png", new File("C:/te/컬러리스트/TeNum/GAvg2.png"));
+			System.out.println("TeNum 으로 출력 완료");
 			
-			ImageMergeCAD.RunOriginMerge(); // 이미지 붙이기
-			ImageMergeCAD.RunAvgMerge(); // 이미지 붙이기
+			ImageMergeInputNumber.RunOriginMerge(); // 이미지 붙이기
+			ImageMergeInputNumber.RunAvgMerge(); // 이미지 붙이기
 //			try {
-//				ImageIO.write(outputColor0, "png", new File("C:/te/컬러리스트/출력/B1.png"));
-//				ImageIO.write(outputColor1, "png", new File("C:/te/컬러리스트/출력/B2.png"));
-//				ImageIO.write(outputColor2, "png", new File("C:/te/컬러리스트/출력/L.png"));
-//				ImageIO.write(outputColor3, "png", new File("C:/te/컬러리스트/출력/R.png"));
-//				System.out.println("출력 완료");
+//				ImageIO.write(outputColor0, "png", new File("C:/te/컬러리스트/TeNum/B1.png"));
+//				ImageIO.write(outputColor1, "png", new File("C:/te/컬러리스트/TeNum/B2.png"));
+//				ImageIO.write(outputColor2, "png", new File("C:/te/컬러리스트/TeNum/L.png"));
+//				ImageIO.write(outputColor3, "png", new File("C:/te/컬러리스트/TeNum/R.png"));
+//				System.out.println("TeNum 완료");
 //			} catch (Exception e) {
 //				e.printStackTrace();
 //			}

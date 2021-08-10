@@ -1,3 +1,5 @@
+/calc/
+/calcdivide/
 /calcminus/
 /calcmultiple/
 /calculator/
@@ -13,3 +15,4 @@
 /chap7_8_3abstract/
 /chap7_8_4abstractOverriding/
 /family/
+/module-info.class
