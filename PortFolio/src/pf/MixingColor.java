@@ -15,8 +15,8 @@ public class MixingColor {
 		RgbToLab rtl = new RgbToLab();
 
 		try {
-			TargetColor = ImageIO.read(new File("C:/te/컬러리스트/tc.png"));
-			CompareColor = ImageIO.read(new File("C:/te/컬러리스트/cc.png"));
+			TargetColor = ImageIO.read(new File("C:/colorlist/mcolor/black.png"));
+			CompareColor = ImageIO.read(new File("C:/colorlist/mcolor/white.png"));
 
 			int x1 = TargetColor.getWidth(null);
 			int y1 = TargetColor.getHeight(null);

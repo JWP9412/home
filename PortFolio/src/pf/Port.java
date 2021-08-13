@@ -15,9 +15,9 @@ public class Port {
 	public static void main(String[] args) throws IOException {
 		BufferedImage image1 = null;
 		BufferedImage image2 = null;
-		String url1 = "C:/te/black.jpg";
-		String url2 = "C:/te/white.jpg";
-		File targetFileName = new File("C:/te/newcolor.jpg");
+		String url1 = "C:/colorlist/mcolor/black.jpg";
+		String url2 = "C:/colorlist/mcolor/white.jpg";
+		File targetFileName = new File("C:/colorlist/mcolor/out/newcolor.jpg");
 		FileOutputStream fos = new FileOutputStream(targetFileName);
 		FileInputStream fis = new FileInputStream(targetFileName);
 		FileImageInputStream fiis = new FileImageInputStream(targetFileName);
